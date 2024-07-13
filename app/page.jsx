@@ -1,19 +1,32 @@
+'use client';
 import React from 'react'
 
+var text="text";
+
+function header(){
+  const changePage = (url)=>{
+    window.location.href = url;
+  }
+  return(
+    <>
+    <header class='w-full max-h-24 px-10 py-3 pb-5 mx-auto rounded-b-lg bg-white shadow-xl'>
+        <div class='leading-3 mx-auto space-y-3'>
+          <h1 class="text-2xl font-bold text-black">Home Page</h1>
+          <button onClick={() => {changePage("/about")}} class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+          About
+          </button>
+        </div>
+    </header>
+    </>
+
+  )
+}
 
 const page = () => {
   return (
-<div class='flex items-center justify-center min-h-screen from-emerald-400 via-amber-300 to-orange-400 bg-gradient-to-r'>
-    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
-        <div class='text-base leading-5 background bg-white max-w-md mx-auto space-y-6'>
-    
-            <h1 class="text-2xl font-bold text-black">Kaavya</h1>
-            <p class='font-normal text-gray-700'>I am a student from St Joseph Engineering College</p>
-            <p class='font-normal text-gray-700'>After using  next.js for a couple of days I learnt the general structure of this framework, how to work with tailwindcss and to use functions to reuse HTML.</p>
-          
-        </div>
-    </div>
-</div>
+    <>
+    {header()}
+    </>
   )
 }
 
