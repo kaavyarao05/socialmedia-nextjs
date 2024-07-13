@@ -5,7 +5,7 @@ import React from 'react'
 const page = () => {
   return (
   <>
-  <button onClick={() => window.location.href ="/.."}class="absolute bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+  <button onClick={() => window.location.href ="/.."}class="absolute bg-white hover:bg-orange-400 text-emerald-400 font-semibold hover:text-white py-2 px-4 border border-emerald-400 hover:border-transparent rounded">
      Go To Home
      </button>
 <div class='flex items-center justify-center min-h-screen from-emerald-400 via-amber-300 to-orange-400 bg-gradient-to-r'>
