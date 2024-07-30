@@ -1,7 +1,20 @@
+//{
+  //"compilerOptions": {
+    //"paths": {
+      //"@/*": ["./src/*"],
+      //"@components/*": ["./src/components/*"]
+    //}
+  //}
+//}
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es6",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["./app/*"],
+      "@components/*": ["./app/components/*"],
+      "@assets/*": ["./app/assets/*"]
   }
+},
+  "exclude": ["node_modules"]
 }
