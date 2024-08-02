@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import About from './Button';
 
 var profile_image_link="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=";
 
@@ -28,7 +29,7 @@ const NavBar = () => {
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
-            <a href="\about\" class="bg-emerald-400 hover:bg-white text-white font-semibold hover:text-emerald-400 py-2 px-4 border border-emerald-400 hover:border-transparent rounded" aria-current="page">About</a>
+            <About></About>
             <a href="\" class="bg-white hover:bg-orange-400 text-emerald-400 font-semibold hover:text-white py-2 px-4 border border-emerald-400 hover:border-transparent rounded">Home</a>
           </div>
         </div>

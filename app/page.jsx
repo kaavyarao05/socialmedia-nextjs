@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Button from '@components/Button';
 
 const text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero aliquet, tristique mauris at, semper lorem. Nunc efficitur pulvinar massa, id imperdiet odio pulvinar ut. Curabitur mattis orci eu magna imperdiet tincidunt. Aliquam nibh mauris, iaculis sit amet blandit id, luctus in est. Ut vitae turpis diam."
 
@@ -13,10 +12,9 @@ const changePage = (url)=>{
 function header(){
   return(
     <>
-    <header className='sticky top-0 w-full max-h-24 px-10 py-3 pb-5 mx-auto rounded-b-lg bg-white shadow-md'>
-        <div className='leading-3 mx-auto space-y-3'>
+    <header className='sticky top-0 w-min max-h-24 px-10 py-3 pb-5 mx-4 rounded-b-lg bg-white shadow-md'>
+        <div className='leading-3 pt-2.5 w-max space-y-3'>
           <a href=".\" class="bg-transparent hover:bg-orange-400 text-emerald-400 font-semibold hover:text-white py-2 px-4 border border-emerald-400 hover:border-transparent rounded">Go To Latest</a>
-          <Button></Button>
         </div>
     </header>
     </>
