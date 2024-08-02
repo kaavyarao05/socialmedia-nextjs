@@ -12,7 +12,7 @@ const changePage = (url)=>{
 function header(){
   return(
     <>
-    <header className='sticky top-0 w-min max-h-24 px-10 py-3 pb-5 mx-4 rounded-b-lg bg-white shadow-md'>
+    <header className='sticky top-0 w-min max-h-14 px-10 py-3 pb-5 mx-4 rounded-b-lg bg-white shadow-md'>
         <div className='leading-3 pt-2.5 w-max space-y-3'>
           <a href=".\" class="bg-transparent hover:bg-orange-400 text-emerald-400 font-semibold hover:text-white py-2 px-4 border border-emerald-400 hover:border-transparent rounded">Go To Latest</a>
         </div>
@@ -41,17 +41,6 @@ function searchBar(){
   )
 }
 
-function footer(){
-  return(
-    <>
-    <footer className='fixed bottom-0 w-full max-h-24 px-10 py-3 pb-5 mx-auto rounded-t-lg bg-white drop-shadow-xl'>
-        <div className='leading-3 mx-auto space-y-3'>
-          <h1 className="text-lg font-bold text-black">Read other users posts here</h1>
-        </div>
-    </footer>
-    </>
-  )
-}
 
 function userPost(user,text){
   return(
@@ -70,7 +59,7 @@ function userPost(user,text){
 
 const page = () => {
   return (
-    <div className='min-h-screen from-emerald-400 via-amber-300 to-orange-400 bg-gradient-to-r'>
+    <div className='flex min-h-screen from-emerald-400 via-amber-300 to-orange-400 bg-gradient-to-r'>
     {header()}
     <div className=''>
     {userPost("User1",text1)}
@@ -78,7 +67,6 @@ const page = () => {
     {userPost("User3",text1)}
     {userPost("User4",text2)}
     </div>
-    {footer()}
     </div>
   )
 }

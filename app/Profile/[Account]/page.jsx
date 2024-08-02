@@ -18,18 +18,6 @@ function header(){
     )
   }
 
-function footer(){
-  const username=usePathname().split('/')[2];
-  return(
-    <>
-    <footer class='fixed bottom-0 w-full max-h-24 px-10 py-3 pb-5 mx-auto rounded-t-lg bg-white shadow-xl'>
-        <div class='leading-3 mx-auto space-y-3'>
-          <h1 class="text-lg font-bold text-black">You are currently visiting {username}'s profile</h1>
-        </div>
-    </footer>
-    </>
-  )
-}
 
 export default function Post() {
 const pathname = usePathname().split()[2];
@@ -39,7 +27,6 @@ return (
     <div class=''>
       <h2 class="text-center py-5 text-black">This user has not posted anything</h2>
     </div>
-    {footer()}
     </div>
 ); 
 

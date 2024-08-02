@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
-import About from './Button';
+import About from './AboutButton';
+import Home from './HomeButton';
 
 var profile_image_link="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=";
 
@@ -30,7 +31,7 @@ const NavBar = () => {
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <About></About>
-            <a href="\" class="bg-white hover:bg-orange-400 text-emerald-400 font-semibold hover:text-white py-2 px-4 border border-emerald-400 hover:border-transparent rounded">Home</a>
+            <Home></Home>
           </div>
         </div>
       </div>
