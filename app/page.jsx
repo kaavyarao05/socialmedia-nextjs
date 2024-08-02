@@ -1,22 +1,22 @@
-import Link from 'node_modules/next/link';
 import React from 'react';
+import Userpost from '@components/userpost';
+import ArrowImage from 'public/uparrow.png';
+import Image from 'node_modules/next/image';
 
 const text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero aliquet, tristique mauris at, semper lorem. Nunc efficitur pulvinar massa, id imperdiet odio pulvinar ut. Curabitur mattis orci eu magna imperdiet tincidunt. Aliquam nibh mauris, iaculis sit amet blandit id, luctus in est. Ut vitae turpis diam."
 
 const text2="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla sit amet neque et augue mattis pellentesque eget ac augue. Phasellus ac nunc venenatis, ullamcorper nunc eu, dictum diam. Duis eleifend, metus ac pharetra consequat, sapien diam dictum tortor, et ultricies nunc tellus id dolor. Aliquam accumsan porta pellentesque. Proin quis nibh arcu."
 
-const changePage = (url)=>{
-  window.location.href = url;
-}
-
-function header(){
+function GoToLatest(){
   return(
     <>
-    <header className='sticky top-0 w-min max-h-14 px-10 py-3 pb-5 mx-4 rounded-b-lg bg-white shadow-md'>
-        <div className='leading-3 pt-2.5 w-max space-y-3'>
-          <a href=".\" class="bg-transparent hover:bg-orange-400 text-emerald-400 font-semibold hover:text-white py-2 px-4 border border-emerald-400 hover:border-transparent rounded">Go To Latest</a>
+    <div>
+        <a href=".\" className='fixed top-0 max-w-fit w-2/12 max-h-16 px-5 pb-5 mx-4 rounded-b-lg bg-white shadow-md'>
+          <div className=' items-center pt-2.5 w-max'>
+            <Image src={ArrowImage} height={40} width={40} className='hover:hue-rotate-60'></Image>  
         </div>
-    </header>
+        </a>
+    </div>
     </>
   )
 }
@@ -35,30 +35,24 @@ function searchBar(){
   )
 }
 
-function userPost(user,text){
-  return(
-    <>
-    <div className="flex flex-col m-auto my-3 py-5 px-20 max-w-3xl bg-white rounded shadow hover:shadow-md">
-      <div className>
-        <Link href={"/Profile/"+user} className=" hover:text-orange-400 text-emerald-400 font-semibold py-2 leading-10">{user}</Link>
-      </div>
-      <div>
-        <p className="text-black font-medium break-normal">{text}</p>
-      </div>
-    </div>
-    </>
-  )
-}
 
 const page = () => {
   return (
-    <div className='flex min-h-screen from-emerald-400 via-amber-300 to-orange-400 bg-gradient-to-r'>
-    {header()}
-    <div className=''>
-    {userPost("User1",text1)}
-    {userPost("User2",text2)}
-    {userPost("User3",text1)}
-    {userPost("User4",text2)}
+    <div className=' from-emerald-400 via-amber-300 to-orange-400 bg-gradient-to-r'>
+      {GoToLatest()}
+    <div className='flex flex-col items-center justify-center'>
+    <div className='flex min-h-screen'>
+    
+    <div className='flex flex-col my-3 py-5 px-20  max-w-3xl'>
+    <Userpost user="User1" text={text2}></Userpost>
+    <Userpost user="User2" text={text1}></Userpost>
+    <Userpost user="User3" text={text2}></Userpost>
+    <Userpost user="User4" text={text1}></Userpost>
+    <Userpost user="User5" text={text2}></Userpost>
+    <Userpost user="User6" text={text1}></Userpost>
+    <Userpost user="User7" text={text2}></Userpost>
+    </div>
+    </div>
     </div>
     </div>
   )
