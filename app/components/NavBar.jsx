@@ -1,6 +1,6 @@
 import React from 'react';
 import About from './AboutButton';
-import Home from './HomeButton';
+import Button from './Button';
 import Image from 'node_modules/next/image';
 import ProfileImage from 'public/profileimage.jpg'
 import Link from 'node_modules/next/link';
@@ -11,9 +11,9 @@ const NavBar = () => {
     <div className='from-emerald-200 via-amber-100 to-orange-200 bg-gradient-to-r'>
         <nav className=" flex items-center justify-center">
           <div className="flex space-x-4 py-5">
-            <Image src={Logo} width={65} height={40} className='mr-10 '></Image>
+            <Image src={Logo} width={65} height={40} className='-hue-rotate-60 mr-10 '></Image>
             <About></About>
-            <Home></Home>
+            <Button text="Home" link="\"/>
           </div>
       
 </nav><div className="absolute right-5 top-5">
