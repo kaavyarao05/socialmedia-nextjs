@@ -14,6 +14,7 @@ const NavBar = () => {
             <Image src={Logo} width={65} height={40} className='-hue-rotate-60 mr-10 '></Image>
             <About></About>
             <Button text="Home" link="\"/>
+            <Button text="Log In" link="\login\"/>
           </div>
       
 </nav><div className="absolute right-5 top-5">
